@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Loading Changer for ML</title>
+  <meta name="description" content="Privacy Policy for Loading Changer for ML (com.chuchu.LoadingChangerBG) - Visual Simulator and Companion Tool." />
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --surface-color: #111827;
+      --surface-card: #1a2234;
+      --surface-border: #2d3748;
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --accent-emerald: #10b981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.15);
+      --accent-cyan: #06b6d4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.15);
+      --accent-amber: #f59e0b;
+      --link-color: #38bdf8;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: var(--font-family);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px 24px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%);
+      border: 1px solid var(--accent-emerald);
+      border-radius: 20px;
+      padding: 40px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-emerald-glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge.cyan {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: rgba(6, 182, 212, 0.35);
+      color: #22d3ee;
+    }
+
+    .badge.amber {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .app-meta {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .app-meta span {
+      display: inline-block;
+      margin-right: 18px;
+    }
+
+    .app-meta strong {
+      color: var(--text-primary);
+    }
+
+    /* Key Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .highlight-card {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-cyan);
+    }
+
+    .highlight-icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .highlight-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+
+    .highlight-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Table of Contents */
+    .toc-card {
+      background: var(--surface-color);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+    }
+
+    .toc-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 8px 24px;
+    }
+
+    .toc-list li {
+      font-size: 14px;
+    }
+
+    .toc-list a {
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toc-list a:hover {
+      color: var(--accent-emerald);
+      text-decoration: none;
+      transform: translateX(3px);
+    }
+
+    /* Main Policy Sections */
+    section {
+      background: var(--surface-color);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      scroll-margin-top: 24px;
+    }
+
+    section:target {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px var(--accent-cyan-glow);
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--surface-border);
+      padding-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin: 20px 0 10px 0;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      color: var(--text-secondary);
+      padding-left: 24px;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Callout Boxes */
+    .callout {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .callout.info {
+      background: rgba(6, 182, 212, 0.08);
+      border-left: 4px solid var(--accent-cyan);
+      color: #cffafe;
+    }
+
+    .callout.success {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--accent-emerald);
+      color: #d1fae5;
+    }
+
+    .callout.warning {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid var(--accent-amber);
+      color: #fef3c7;
+    }
+
+    .callout strong {
+      color: #ffffff;
+    }
+
+    /* Tables */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 18px 0;
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    th {
+      background: var(--surface-card);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td {
+      color: var(--text-secondary);
+    }
+
+    code {
+      background: #0d1322;
+      border: 1px solid #23304a;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-emerald);
+      color: #042f2e;
+      font-weight: 700;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      opacity: 0.85;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      opacity: 1;
+      transform: scale(1.08);
+      color: #042f2e;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 20px 16px 60px 16px;
+      }
+
+      header {
+        padding: 24px 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 20px 18px;
+      }
+
+      .toc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      header, section, .toc-card, .highlight-card {
+        background: #ffffff !important;
+        border: 1px solid #e5e7eb !important;
+        box-shadow: none !important;
+        color: #111827 !important;
+      }
+      h1, h2, h3, strong {
+        color: #111827 !important;
+      }
+      p, li, td {
+        color: #374151 !important;
+      }
+      .back-to-top, .toc-card {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="badge-bar">
+        <span class="badge">Official Policy</span>
+        <span class="badge cyan">Google Play Compliant</span>
+        <span class="badge amber">Android 15 (API 35) Ready</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="app-meta">
+        <span><strong>Application:</strong> Loading Changer for ML</span>
+        <span><strong>Package ID:</strong> <code>com.chuchu.LoadingChangerBG</code></span>
+        <span><strong>Version:</strong> 2.0.0+</span>
+        <br />
+        <span><strong>Effective Date:</strong> September 21, 2026</span>
+        <span><strong>Last Updated:</strong> September 21, 2026</span>
+      </div>
+      <p style="color: #cbd5e1; font-size: 15px; margin: 0;">
+        This Privacy Policy outlines how <strong>Loading Changer for ML</strong> ("we", "our", or "the App") collects, handles, protects, and discloses information when you download, install, or use our mobile application. We are committed to transparency, user privacy, and strict adherence to the Google Play Developer Program Policies, GDPR, and CCPA.
+      </p>
+    </header>
+
+    <!-- Key Highlights Grid -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <div class="highlight-title">Zero Personal Data</div>
+        <div class="highlight-desc">We do not collect names, email addresses, phone numbers, contacts, or passwords.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🔒</div>
+        <div class="highlight-title">100% Local & Sandboxed</div>
+        <div class="highlight-desc">Your imported videos and photos remain strictly on your device. Zero cloud uploads.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🚫</div>
+        <div class="highlight-title">No Dangerous Permissions</div>
+        <div class="highlight-desc">No broad storage permissions (zero MANAGE_EXTERNAL_STORAGE). Clean Android Scoped Storage.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🎮</div>
+        <div class="highlight-title">Safe Fan Simulator</div>
+        <div class="highlight-desc">Standalone visual simulator. Does not modify, inject into, or touch any third-party game files.</div>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc-card" aria-label="Table of Contents">
+      <div class="toc-title">📋 Table of Contents</div>
+      <ol class="toc-list">
+        <li><a href="#section-1">1. Introduction & Overview</a></li>
+        <li><a href="#section-2">2. Information We Collect</a></li>
+        <li><a href="#section-3">3. How We Use Information</a></li>
+        <li><a href="#section-4">4. Device Permissions & Purpose</a></li>
+        <li><a href="#section-5">5. Local Media & Custom Studio Privacy</a></li>
+        <li><a href="#section-6">6. Advertising & Third-Party SDKs (AdMob)</a></li>
+        <li><a href="#section-7">7. Data Retention & Deletion</a></li>
+        <li><a href="#section-8">8. Children's Privacy (COPPA & Families Policy)</a></li>
+        <li><a href="#section-9">9. Data Security & Storage</a></li>
+        <li><a href="#section-10">10. Fair Use & Intellectual Property Disclaimer</a></li>
+        <li><a href="#section-11">11. Your Rights (GDPR & CCPA/CPRA)</a></li>
+        <li><a href="#section-12">12. Changes to This Policy</a></li>
+        <li><a href="#section-13">13. Developer Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <section id="section-1">
+      <h2>1. Introduction & Overview</h2>
+      <p>
+        <strong>Loading Changer for ML</strong> (package name: <code>com.chuchu.LoadingChangerBG</code>) is an educational visual simulator, tutorial companion, and creative studio designed for fans and video creators. The App enables users to simulate authentic startup loading screens, test custom MP4 animations, and explore video editing tutorials safely.
+      </p>
+      <p>
+        We respect your privacy and believe in minimal data collection. The App does not require you to register an account, sign in, or provide personal contact details.
+      </p>
+      <div class="callout success">
+        <strong>Key Commitment:</strong> The App operates entirely within its own sandboxed environment. We do not transmit your personal media, files, or identity to any remote server operated by us.
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section-2">
+      <h2>2. Information We Collect</h2>
+
+      <h3>A. Information You Provide to Us Directly</h3>
+      <p>
+        We do <strong>NOT</strong> require or collect any of the following directly:
+      </p>
+      <ul>
+        <li>No user accounts, usernames, or passwords.</li>
+        <li>No contact information (email addresses, phone numbers, postal addresses).</li>
+        <li>No financial, billing, or payment information.</li>
+        <li>No biometric or location/GPS data.</li>
+      </ul>
+
+      <h3>B. Information Collected Automatically by Third Parties</h3>
+      <p>
+        When you use the App, third-party advertising partners—specifically <strong>Google AdMob (Google Mobile Ads SDK)</strong>—may automatically collect certain non-personally identifiable technical information in order to serve ads and detect fraudulent activity:
+      </p>
+      <ul>
+        <li><strong>Device Identifiers:</strong> Android Advertising ID (AAID), unique device identifiers.</li>
+        <li><strong>Network & Connection:</strong> IP address, general coarse location (country/city level derived from IP), mobile network carrier.</li>
+        <li><strong>Device Characteristics:</strong> Device model, operating system version, screen resolution, language settings.</li>
+        <li><strong>Diagnostic & Performance Data:</strong> Ad interaction data, impression timestamps, crash logs, and load latency.</li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section-3">
+      <h2>3. How We Use Information</h2>
+      <p>Any technical data processed is utilized exclusively for the following legitimate purposes:</p>
+      <ul>
+        <li><strong>App Functionality:</strong> Maintaining local preferences (e.g., sound effects, simulator display settings) stored locally on your device via <code>shared_preferences</code>.</li>
+        <li><strong>Advertising Delivery:</strong> Displaying non-intrusive App Open ads and Interstitial ads via Google AdMob to support the continued development and maintenance of the free application.</li>
+        <li><strong>Quality & Stability:</strong> Monitoring crash statistics and technical performance to deliver bug fixes and performance updates.</li>
+        <li><strong>Fraud Prevention & Security:</strong> Preventing click fraud, unauthorized bot traffic, and abuse of ad networks.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="section-4">
+      <h2>4. Device Permissions & Purpose</h2>
+      <p>
+        In strict compliance with Android 15 (API level 35) requirements and Google Play Developer Program policies, our app requests only the absolute minimum set of standard, non-sensitive permissions:
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Type</th>
+              <th>Purpose / Justification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>android.permission.INTERNET</code></td>
+              <td>Normal</td>
+              <td>Required to load and display advertisements via Google Mobile Ads SDK and fetch remote web fonts (Google Fonts).</td>
+            </tr>
+            <tr>
+              <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+              <td>Normal</td>
+              <td>Enables the App to verify whether an active internet connection exists before requesting ad units, saving device battery and data.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout info">
+        <strong>Zero Sensitive Permissions:</strong> The App does <strong>NOT</strong> request sensitive or dangerous permissions such as <code>MANAGE_EXTERNAL_STORAGE</code>, <code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>, <code>CAMERA</code>, <code>RECORD_AUDIO</code>, or <code>ACCESS_FINE_LOCATION</code>.
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="section-5">
+      <h2>5. Local Media & Custom Studio Privacy</h2>
+      <p>
+        The App features a <em>Custom Studio</em> where users may select an MP4 video or image file from their device to test how it looks within the simulated loading screen engine.
+      </p>
+      <ul>
+        <li><strong>System File Picker:</strong> File selection is handled through the standard Android system photo/file picker (<code>file_picker</code>). The App only receives temporary read access to the specific file you voluntarily choose.</li>
+        <li><strong>Local Processing Only:</strong> All video rendering, frame decoding, and playback occur 100% locally on your device hardware.</li>
+        <li><strong>No Cloud Transmission:</strong> We never upload, transmit, duplicate, or inspect your selected media files. Your personal photos and videos never leave your phone.</li>
+        <li><strong>Safe Media Export:</strong> When exporting tutorial presets or wallpapers, files are saved directly into your device's standard public <code>Downloads/</code> directory for your personal use.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="section-6">
+      <h2>6. Advertising & Third-Party SDKs (AdMob)</h2>
+      <p>
+        The App integrates <strong>Google Mobile Ads (AdMob)</strong> to display advertisements. AdMob may serve personalized or non-personalized advertisements depending on your region, consent, and device settings.
+      </p>
+
+      <div class="callout warning">
+        <strong>Third-Party Privacy Policy:</strong> Google's handling of ad data is governed by Google's Privacy Policy. We encourage you to review:
+        <br />
+        👉 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy & Terms</a>
+        <br />
+        👉 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use their services</a>
+      </div>
+
+      <h3>How to Opt-Out of Personalized Ads:</h3>
+      <ul>
+        <li><strong>On Android:</strong> Go to <strong>Settings</strong> &gt; <strong>Google</strong> &gt; <strong>Ads</strong> &gt; Toggle on <em>"Delete advertising ID"</em> or <em>"Opt out of Ads Personalization"</em>.</li>
+        <li><strong>Online:</strong> You can manage Google ad settings at <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+      </ul>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="section-7">
+      <h2>7. Data Retention & Deletion</h2>
+      <p>
+        Since <strong>Loading Changer for ML</strong> does not maintain user accounts or cloud databases, we do not store any personal data on our servers:
+      </p>
+      <ul>
+        <li><strong>App Settings & Cache:</strong> Settings (such as sound effects and simulator preferences) are stored in local key-value pairs (<code>SharedPreferences</code>) on your device. You can immediately delete this data at any time by clearing the App's storage in <strong>Android Settings &gt; Apps &gt; Loading Changer for ML &gt; Clear Storage / Clear Cache</strong>, or by uninstalling the application.</li>
+        <li><strong>Ad Network Data:</strong> Data collected by Google AdMob is retained according to Google's standard data retention policies (typically anonymized after 9 to 18 months).</li>
+      </ul>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="section-8">
+      <h2>8. Children's Privacy (COPPA & Families Policy)</h2>
+      <p>
+        Our App is not directed toward children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect or solicit personal data from children.
+      </p>
+      <p>
+        If you are a parent or legal guardian and believe that your child has provided personal information to us or that third-party SDKs have collected data contrary to your preferences, please contact us immediately, and we will take swift action to address the situation.
+      </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="section-9">
+      <h2>9. Data Security & Storage</h2>
+      <p>
+        We are committed to protecting your data:
+      </p>
+      <ul>
+        <li>All network communications between the App and Google AdMob or Google Fonts occur over secure, encrypted channels using industry-standard Transport Layer Security (HTTPS/TLS).</li>
+        <li>The App does not access external game directories, private device roots, or unauthorized files.</li>
+        <li>No personal data is ever stored in unencrypted, publicly accessible cloud storage.</li>
+      </ul>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="section-10">
+      <h2>10. Fair Use & Intellectual Property Disclaimer</h2>
+      <p>
+        To ensure complete compliance with Google Play's <em>Impersonation & Intellectual Property</em> and <em>Device & Network Abuse</em> policies:
+      </p>
+      <ul>
+        <li><strong>Unofficial Fan Companion:</strong> <em>Loading Changer for ML</em> is an independent, fan-made educational simulator and creative guide. It is <strong>NOT</strong> affiliated with, endorsed by, sponsored by, or associated with Moonton, Shanghai Moonton Technology, or Mobile Legends: Bang Bang.</li>
+        <li><strong>No Game Modification:</strong> This application does <strong>NOT</strong> modify, inject code into, alter, hook, or tamper with any official game clients, server communications, or third-party files. It operates strictly as an isolated visual simulation.</li>
+        <li><strong>Trademarks:</strong> "Mobile Legends: Bang Bang", "MLBB", and related character names, art, and trademarks are the registered property of their respective copyright and trademark owners. Their reference within this companion app falls strictly under Fair Use for educational, tutorial, and commentary purposes.</li>
+      </ul>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="section-11">
+      <h2>11. Your Rights (GDPR & CCPA/CPRA)</h2>
+      <p>
+        Depending on your location (such as the European Union under GDPR or California under CCPA/CPRA), you may have the following statutory privacy rights:
+      </p>
+      <ul>
+        <li><strong>Right to Know / Access:</strong> You have the right to request information regarding the categories of personal data collected and shared.</li>
+        <li><strong>Right to Deletion:</strong> You have the right to request deletion of any personal data (you can achieve this locally by clearing the App data or uninstalling).</li>
+        <li><strong>Right to Opt-Out of Sale / Sharing:</strong> We do <strong>NOT</strong> sell, rent, or trade your personal data. You can opt out of personalized interest-based advertising through your Android system settings.</li>
+        <li><strong>Right to Non-Discrimination:</strong> Exercising your privacy rights will not result in any discriminatory treatment or loss of app functionality.</li>
+      </ul>
+    </section>
+
+    <!-- Section 12 -->
+    <section id="section-12">
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>
+        We may periodically update our Privacy Policy to reflect changes in our practices, app features, or applicable legal and regulatory requirements. Any updates will be posted on this page with an updated <strong>"Last Updated"</strong> revision date.
+      </p>
+      <p>
+        We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+      </p>
+    </section>
+
+    <!-- Section 13 -->
+    <section id="section-13">
+      <h2>13. Developer Contact Information</h2>
+      <p>
+        If you have any questions, suggestions, concerns, or requests regarding this Privacy Policy or the data practices of <strong>Loading Changer for ML</strong>, please feel free to reach out to us:
+      </p>
+
+      <div class="callout info">
+        <p style="margin-bottom: 6px;"><strong>Developer / Publisher:</strong> ChuChu Studio</p>
+        <p style="margin-bottom: 6px;"><strong>App Name:</strong> Loading Changer for ML</p>
+        <p style="margin-bottom: 6px;"><strong>Package Name:</strong> <code>com.chuchu.LoadingChangerBG</code></p>
+        <p style="margin-bottom: 0;"><strong>Support Email:</strong> <a href="mailto:support@mkfayehub.com">support@mkfayehub.com</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 ChuChu Studio. All rights reserved.</p>
+      <p>Loading Changer for ML is an unofficial fan companion and simulator tool.</p>
+    </footer>
+  </div>
+
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" title="Back to top" aria-label="Back to top">↑</a>
+
+</body>
+</html>
